@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putpointer.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eliagarc <eliagarc@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 15:27:39 by eliagarc          #+#    #+#             */
-/*   Updated: 2023/10/24 11:09:14 by eliagarc         ###   ########.fr       */
+/*   Updated: 2024/01/03 21:49:12 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_putnbrp(unsigned long n, int fd)
 	int	res;
 
 	res = 0;
-	if (fd > 0 && n >= 0)
+	if (fd > 0)
 	{
 		if (write(1, "0x", 2) == -1)
 			return (-1);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_checks.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eliagarc <eliagarc@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 16:51:19 by eliagarc          #+#    #+#             */
-/*   Updated: 2023/10/24 11:08:24 by eliagarc         ###   ########.fr       */
+/*   Updated: 2024/01/03 21:48:37 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,52 +14,27 @@
 
 static int	typ_check2(const char var, va_list vl)
 {
-	unsigned long	pm;
-
 	if (var == 'p')
-	{
-		pm = (unsigned long)va_arg(vl, void *);
-		return (ft_putnbrp(pm, 1));
-	}
+		return (ft_putnbrp((unsigned long)va_arg(vl, void *), 1));
 	else if (var == 'x')
-	{
-		g_i = va_arg(vl, unsigned int);
-		return (ft_putnbr_hx(g_i, 1, 1));
-	}
+		return (ft_putnbr_hx(va_arg(vl, unsigned int), 1, 1));
 	else if (var == 'X')
-	{
-		g_i = va_arg(vl, unsigned int);
-		return (ft_putnbr_hx(g_i, 1, 2));
-	}
+		return (ft_putnbr_hx(va_arg(vl, unsigned int), 1, 2));
 	else if (var == '%')
-	{
 		return (ft_putchar('%'));
-	}
 	return (0);
 }
 
 static int	typ_check(const char var, va_list vl)
 {
 	if (var == 'c')
-	{
-		g_c = (char)va_arg(vl, int);
-		return (ft_putchar(g_c));
-	}
+		return (ft_putchar((char)va_arg(vl, int)));
 	else if (var == 's')
-	{
-		g_s = va_arg(vl, char *);
-		return (ft_putstr(g_s, 1));
-	}
+		return (ft_putstr(va_arg(vl, char *), 1));
 	else if (var == 'i' || var == 'd')
-	{
-		g_i = va_arg(vl, int);
-		return (ft_putnbr(g_i, 1));
-	}
+		return (ft_putnbr(va_arg(vl, int), 1));
 	else if (var == 'u')
-	{
-		g_ui = va_arg(vl, unsigned int);
-		return (ft_putnbru(g_ui, 1));
-	}
+		return (ft_putnbru(va_arg(vl, unsigned int), 1));
 	return (0);
 }
 

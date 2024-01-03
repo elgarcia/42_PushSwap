@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eliagarc <eliagarc@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 19:27:58 by eliagarc          #+#    #+#             */
-/*   Updated: 2023/11/07 16:57:59 by eliagarc         ###   ########.fr       */
+/*   Updated: 2024/01/03 21:47:56 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,6 @@
 # define B_READED_NULL 0
 # define HEXA_MAY "0123456789ABCDEF"
 # define HEXA_MIN "0123456789abcdef"
-
-char			g_c;
-char			*g_s;
-int				g_i;
-unsigned int	g_ui;
 
 /* typedef struct s_list
 {
